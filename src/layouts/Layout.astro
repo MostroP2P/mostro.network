@@ -16,7 +16,7 @@ const {
   title,
   description = "Non-custodial P2P Bitcoin exchange on Lightning Network & Nostr. Trade Bitcoin peer-to-peer without intermediaries, KYC, or custody.",
   locale = 'en',
-  ogImage = '/images/mostro-logo.jpg',
+  ogImage = '/images/mostro-logo.png',
   canonicalPath,
   type = 'website',
 } = Astro.props;
@@ -61,7 +61,7 @@ const jsonLd = {
     url: 'https://mostro.network',
     logo: {
       '@type': 'ImageObject',
-      url: `${siteUrl}/images/mostro-logo.jpg`,
+      url: `${siteUrl}/images/mostro-logo.png`,
     },
     sameAs: [
       'https://github.com/MostroP2P',
@@ -124,7 +124,7 @@ const jsonLd = {
 
     <!-- Favicons -->
     <link rel="icon" type="image/x-icon" href="/favicon.ico" />
-    <link rel="apple-touch-icon" sizes="180x180" href="/images/mostro-logo.jpg" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/images/mostro-logo.png" />
 
     <!-- Structured Data (JSON-LD) -->
     <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
