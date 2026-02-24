@@ -60,6 +60,17 @@ const i = t(locale);
             {i.footer.foundation}
           </a>
         </div>
+
+        <div class="footer-section">
+          <h4>{i.footer.supportedBy}</h4>
+          <a href="https://hrf.org" target="_blank" rel="noopener" class="supporter-link">
+            <img src="/images/hrf-logo.png" alt="HRF" class="supporter-logo" />
+          </a>
+          <a href="https://opensats.org" target="_blank" rel="noopener" class="supporter-link">
+            <img src="/images/opensats-logo.svg" alt="OpenSats" class="supporter-logo opensats-logo" />
+            <span>OpenSats</span>
+          </a>
+        </div>
       </div>
     </div>
 
@@ -138,6 +149,27 @@ const i = t(locale);
 
   .footer-section a:hover {
     color: var(--accent);
+  }
+
+  .supporter-link {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .supporter-logo {
+    height: 28px;
+    width: auto;
+    opacity: 0.8;
+    transition: opacity 0.2s;
+  }
+
+  .supporter-link:hover .supporter-logo {
+    opacity: 1;
+  }
+
+  .opensats-logo {
+    height: 22px;
   }
 
   .footer-bottom {
