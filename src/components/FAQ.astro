@@ -9,7 +9,7 @@ const i = t(locale);
 
 const formatAnswer = (answer: string) =>
   answer.split('\n\n').map((paragraph) =>
-    paragraph.split(/(\*\*[^*]+?\*\*)/g).filter(Boolean).map((part) => ({
+    paragraph.split(/(\*\*(?:(?!\*\*).)+?\*\*)/gs).filter(Boolean).map((part) => ({
       strong: part.startsWith('**') && part.endsWith('**'),
       text: part.startsWith('**') && part.endsWith('**') ? part.slice(2, -2) : part,
     }))
