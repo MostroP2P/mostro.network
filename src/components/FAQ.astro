@@ -6,6 +6,14 @@ interface Props {
 }
 const { locale } = Astro.props;
 const i = t(locale);
+
+const formatAnswer = (answer: string) =>
+  answer.split('\n\n').map((paragraph) =>
+    paragraph.split(/(\*\*[^*]+?\*\*)/g).filter(Boolean).map((part) => ({
+      strong: part.startsWith('**') && part.endsWith('**'),
+      text: part.startsWith('**') && part.endsWith('**') ? part.slice(2, -2) : part,
+    }))
+  );
 ---
 
 <section id="faq" class="section">
@@ -21,7 +29,15 @@ const i = t(locale);
             <span class="faq-icon">+</span>
           </button>
           <div class="faq-answer">
-            <div class="faq-answer-content" set:html={item.a.replace(/\n\n/g, '</p><p>').replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>')} />
+            <div class="faq-answer-content">
+              {formatAnswer(item.a).map((paragraph) => (
+                <p>
+                  {paragraph.map((part) =>
+                    part.strong ? <strong>{part.text}</strong> : part.text
+                  )}
+                </p>
+              ))}
+            </div>
           </div>
         </div>
       ))}

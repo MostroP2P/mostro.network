@@ -69,6 +69,7 @@ const jsonLd = {
     ],
   },
 };
+const jsonLdString = JSON.stringify(jsonLd).replace(/</g, '\\u003c');
 ---
 
 <!doctype html>
@@ -127,7 +128,7 @@ const jsonLd = {
     <link rel="apple-touch-icon" sizes="180x180" href="/images/mostro-logo.png" />
 
     <!-- Structured Data (JSON-LD) -->
-    <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
+    <script type="application/ld+json" set:html={jsonLdString} />
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
