@@ -135,6 +135,7 @@ export const translations = {
     footer: {
       desc: "Non-custodial P2P Bitcoin exchange built on Lightning Network and Nostr.",
       protocol: "Protocol",
+      stats: "Network Statistics",
       community: "Community", 
       development: "Development",
       support: "Contribute",
@@ -283,6 +284,7 @@ export const translations = {
     footer: {
       desc: "Exchange P2P de Bitcoin no custodial construido sobre Lightning Network y Nostr.",
       protocol: "Protocolo",
+      stats: "Estadísticas de la red",
       community: "Comunidad",
       development: "Desarrollo", 
       support: "Contribuir",
@@ -431,6 +433,7 @@ export const translations = {
     footer: {
       desc: "Exchange P2P di Bitcoin non-custodial costruito su Lightning Network e Nostr.",
       protocol: "Protocollo",
+      stats: "Statistiche della rete",
       community: "Comunità",
       development: "Sviluppo",
       support: "Contribuisci", 
@@ -579,6 +582,7 @@ export const translations = {
     footer: {
       desc: "Exchange P2P de Bitcoin não-custodial construído sobre Lightning Network e Nostr.",
       protocol: "Protocolo",
+      stats: "Estatísticas da rede",
       community: "Comunidade",
       development: "Desenvolvimento",
       support: "Contribuir",
@@ -727,6 +731,7 @@ export const translations = {
     footer: {
       desc: "Échange P2P de Bitcoin non-custodial construit sur Lightning Network et Nostr.",
       protocol: "Protocole",
+      stats: "Statistiques du réseau",
       community: "Communauté", 
       development: "Développement",
       support: "Contribuer",
